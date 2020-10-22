@@ -1,5 +1,5 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/vanessaidenny/dotnet-practice?color=blueviolet&style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/vanessaidenny/dotnet-practice?color=brightgreen&style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/vanessaidenny/csharp-first-steps-logic?color=blueviolet&style=plastic)
+![GitHub contributors](https://img.shields.io/github/contributors/vanessaidenny/csharp-first-steps-logic?color=brightgreen&style=plastic)
 
 # C# Practices
 
