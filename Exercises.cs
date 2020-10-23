@@ -23,6 +23,30 @@ namespace dotnet.Practice
             return $"\nLargest number: {largerValue}";
         }
 
+        /*
+            Calculates the years elapsed between two dates
+
+            Parameters:
+                DateTime birthDate:
+                   Date input to calculate the age
+
+            Returns:
+                return 0 when the date input is larger than today
+                return years elapsed
+        */
+        public static int CalculatesAge(DateTime birthDate)
+        {
+            double daysInYear = 365.2425;
+
+            if (birthDate >= DateTime.Today.Date)
+                return 0;
+
+            double daysElapsed = DateTime.Today.Subtract(birthDate).TotalDays;
+            double totalAge = daysElapsed/daysInYear;
+
+            return (int)Math.Truncate(totalAge);
+        }
+
         /* Complicated Permissions Challenge
         Implement business rules that restrict access to users based
         on their permissions and their level. Display a different

@@ -13,9 +13,10 @@ namespace dotnet
             Console.WriteLine($"\nHello, {name}! Select an option:");
             Console.WriteLine("1 - Obtain a raffle number");
             Console.WriteLine("2 - Obtain a larger number");
-            Console.WriteLine("3 - Complicated permission");
-            Console.WriteLine("4 - Game Battle");
-            Console.WriteLine("5 - Exit");
+            Console.WriteLine("3 - Obtain the age");
+            Console.WriteLine("4 - Complicated permission");
+            Console.WriteLine("5 - Game Battle");
+            Console.WriteLine("6 - Exit");
 
             int option = Convert.ToInt32(Console.ReadLine());
             
@@ -39,6 +40,19 @@ namespace dotnet
                     break;
 
                 case 3:
+                    Console.WriteLine("\nInsert your birth date: (dd/mm/yyyy)");
+
+                    try {
+                        DateTime birthDate = Convert.ToDateTime(Console.ReadLine());
+                        int resultAge = Exercise.CalculatesAge(birthDate);
+                        Console.WriteLine($"\nBirth: {birthDate:d} - Age: {resultAge}");
+                    }
+                    catch (FormatException){
+                        Console.WriteLine("\nInvalid date format - Insert as (dd/mm/yyyy) format\n");
+                    }
+                    break;
+
+                case 4:
                     Console.WriteLine("\nInsert your permission's type");
                     Console.WriteLine("1 - Admin");
                     Console.WriteLine("2 - Manager");
@@ -51,11 +65,12 @@ namespace dotnet
                     Console.WriteLine(Exercise.ComplicatedPermission(permissionType, permissionLevel));
                     break;
 
-                case 4:
+                case 5:
                     Console.WriteLine(Exercise.GameBattle());
                     break;
 
-                case 5:
+                case 6:
+                default:
                     Exit();
                     break;
             }
