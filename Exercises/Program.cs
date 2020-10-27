@@ -1,5 +1,5 @@
 ﻿using System;
-using dotnet.Practice;
+using Exercises;
 
 namespace dotnet
 {

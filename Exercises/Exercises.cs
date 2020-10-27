@@ -1,8 +1,8 @@
 using System;
 
-namespace dotnet.Practice
+namespace Exercises
 {    
-    class Exercise
+    public class Exercise
     {        
         //Gives a random number from a maximum value obtained
         public static string RaffleNumber(int maxValue)
