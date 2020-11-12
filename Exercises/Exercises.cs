@@ -1,4 +1,5 @@
 using System;
+using Microsoft.VisualBasic;
 
 namespace Exercises
 {    
@@ -36,15 +37,12 @@ namespace Exercises
         */
         public static int CalculatesAge(DateTime birthDate)
         {
-            double daysInYear = 365.2425;
-
-            if (birthDate >= DateTime.Today.Date)
+            if (birthDate >= DateTime.Now)
                 return 0;
 
-            double daysElapsed = DateTime.Today.Subtract(birthDate).TotalDays;
-            double totalAge = daysElapsed/daysInYear;
+            int totalAge = (int)DateAndTime.DateDiff(DateInterval.Year, birthDate, DateTime.Now);
 
-            return (int)Math.Truncate(totalAge);
+            return totalAge;
         }
 
         /* Complicated Permissions Challenge

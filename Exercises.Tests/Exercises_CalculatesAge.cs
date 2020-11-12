@@ -5,6 +5,8 @@ namespace Exercises.UnitTests
 {
     public class Exercises_CalculatesAge
     {
+        DateTime dateNow = DateTime.Now;
+        
         [Fact]        
         public void CalculatesAge_Input365_Return1Year()
         {
@@ -15,7 +17,7 @@ namespace Exercises.UnitTests
         [Fact]
         public void CalculatesAge_Input364_Return0Year()
         {
-            DateTime test = DateTime.Today.Subtract(TimeSpan.FromDays(364));
+            DateTime test = DateTime.Today.AddDays(-1);
             Assert.Equal(0, Exercise.CalculatesAge(test));
         }
 
